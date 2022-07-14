@@ -1,61 +1,43 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useState } from 'react'
+import { EventIE, EventTypes } from '../app/types'
+import { Button } from '../components/Button'
+import { Checkbox } from '../components/Checkbox'
+import { EventComponent } from '../components/EventComponent'
+import { Input } from '../components/Input'
 
-import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
 
+const mockData = [
+  {
+    date: new Date(2005, 11, 3),
+    name:"очень важная цель",
+    description: "очень большое и крутое описание",
+    type: EventTypes.AIM
+  } as EventIE,
+  {
+    date: new Date(2006, 1, 10),
+    name: "Комментарий для лоха",
+    description: "ты лошара тупая",
+    isModerated: true,
+    type: EventTypes.COMMENT
+  } as EventIE
+]
+
+
 const IndexPage: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Redux Toolkit</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
       </Head>
-      <header className={styles.header}>
-        <img src="/logo.svg" className={styles.logo} alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className={styles.link}
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className={styles.link}
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <EventComponent events={mockData}></EventComponent>
     </div>
   )
 }

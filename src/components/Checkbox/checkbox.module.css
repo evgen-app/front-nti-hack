@@ -1,0 +1,22 @@
+.checkBox{
+    display:inline-flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    color:aliceblue;
+    font-size: 14px;
+    align-items: center;
+}
+.box{
+    width: 22px !important;
+    height: 22px;
+    background-color: #181C22;
+    border-radius: 3px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

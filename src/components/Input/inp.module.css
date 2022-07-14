@@ -1,0 +1,18 @@
+.inp{
+    background: #23252C;
+    border-radius: 14px;
+    height: 40px;
+    line-height: 40px;
+    border: 0px;
+    padding: 0 14px;
+    color: #4D505B;
+    font-size: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+.inp:hover{
+    box-shadow: -3px -3px 8px rgb(255 255 255 / 5%), 3px 3px 8px rgb(0 0 0 / 5%);
+}
+.inp:focus{
+    color: #fff;
+}

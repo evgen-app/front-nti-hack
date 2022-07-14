@@ -1,0 +1,49 @@
+.eventCard{
+    width: 316px;
+    background: #1A1B1F;
+    border-radius: 14px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: #dfdfdf;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding:10px 25px
+}
+
+.eventCard:hover{
+    box-shadow: -4px -4px 4px #1e1f24, 4px 4px 8px #16171a;
+}
+
+.eventTypeBar{
+    border-radius: 100px;
+    height: 10px;
+    width: 50px;
+}
+
+.wrapText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:5px
+}
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.moth{
+    color: #b1b1b1;
+
+}
+.eventWrapper{
+    display: flex;
+    flex-direction: column;
+    gap:15px
+}
