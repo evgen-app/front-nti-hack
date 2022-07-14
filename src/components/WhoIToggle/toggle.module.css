@@ -1,0 +1,16 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.value{
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.active{
+    background-color: azure !important;
+}

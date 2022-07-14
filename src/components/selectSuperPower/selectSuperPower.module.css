@@ -1,0 +1,16 @@
+.selectSuperPower{
+    height: 32px;
+    width: 32px;
+    background: #000;
+    cursor: pointer;
+}
+.active{
+    background-color: green !important;
+}
+
+.selectWrapper{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+
+}

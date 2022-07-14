@@ -1,14 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import onBoardingSlice from './user/onBoardingSlice'
 
-let counterReducer = null
+export const store = configureStore({
+  reducer:onBoardingSlice
+})
 
-export function makeStore() {
-  return configureStore({
-    reducer: { counter: counterReducer },
-  })
-}
 
-const store = makeStore()
 
 export type AppState = ReturnType<typeof store.getState>
 
