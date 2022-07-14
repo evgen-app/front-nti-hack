@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFormState, setSuperPowerPage, superPowerPageIE } from "../../../app/user/onBoardingSlice";
 import { AppState } from '../../../app/store'
 import { SelectSuperPower } from "../../../components/selectSuperPower";
+import styles from "../../../styles/onBoarding/onBoarding.module.css"
 
 const OnBoardingPage2: NextPage = () => {
     let initState = useSelector((state: AppState)=>getFormState(state))[1] as superPowerPageIE
@@ -32,9 +33,10 @@ const OnBoardingPage2: NextPage = () => {
     let dispatch = useDispatch()
 
     return(
-        <div>
-            <div>Какая у тебя суперсила?</div>
-            <div>
+        <div className={styles.mainWrapper} >
+            <div className={styles.h}>Какая у тебя <br></br>
+                <span className={styles.hc}> "суперсила?"</span></div>
+            <div className={styles.powerWrapper}>
                 <div>
                     <div>Коммуникация и сотрудничество</div>
                     <SelectSuperPower active={communication} onChange={(value)=>setCommunication(value)}></SelectSuperPower>
@@ -67,10 +69,15 @@ const OnBoardingPage2: NextPage = () => {
                     <div>Лидерство, умение вести за собой</div>
                     <SelectSuperPower active={leaders} onChange={(value)=>setLeaders(value)}></SelectSuperPower>
                 </div>
-                <div onClick={()=>dispatch(setSuperPowerPage(SuperPowerPageState))}>
-                    <Link href="/registration/onBoarding/1">Назад</Link>
-                    <Link href="/registration/onBoarding/3">Вперед</Link>
-                </div>
+
+            </div>
+            <div className={styles.linkWrapper} onClick={()=>dispatch(setSuperPowerPage(SuperPowerPageState))}>
+                    <div className={styles.backLink}>
+                        <Link href="/registration/onBoarding/1">Назад</Link>
+                    </div>
+                    <div className={styles.nextLink}>
+                        <Link href="/registration/onBoarding/3" className={styles.nextLink}>Вперед</Link>
+                    </div>
             </div>
         </div>
     )

@@ -1,16 +1,20 @@
 .selectSuperPower{
-    height: 32px;
-    width: 32px;
-    background: #000;
+    border: 2px solid #7D47BF;
+    border-radius: 8px;
+    border-radius: 8px;
+    width: 48px;
+    height: 24px;
     cursor: pointer;
 }
 .active{
-    background-color: green !important;
+    background: #7D47BF;
 }
 
 .selectWrapper{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
-    gap:5px;
-
+    gap:10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }

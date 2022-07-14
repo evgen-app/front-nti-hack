@@ -76,7 +76,9 @@ const lastPage: NextPage = () => {
                 </div>
             </div>
             <div>Мы уверены, все твои цели и мечты сбудуться, если следовать четкому плану</div>
-            <Link href="/">Далее</Link>
+            <div className={styles.nextLink}>
+                <Link href="/" className={styles.nextLink}>Далее</Link>
+            </div>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import { Input } from "../../../components/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { getFormState, setWhyPage, whyPageIE } from "../../../app/user/onBoardingSlice";
 import { AppState } from '../../../app/store'
+import styles from "../../../styles/onBoarding/onBoarding.module.css"
 
 const OnBoardingPage1: NextPage = () => {
     let initState = useSelector((state: AppState)=>getFormState(state))[0] as whyPageIE
@@ -22,23 +23,28 @@ const OnBoardingPage1: NextPage = () => {
     } as whyPageIE
 
     return(
-        <div>
-            <div>Прежде чем что-то сделать, спроси себя "Зачем?"</div>
+        <div className={styles.mainWrapper}>
+            <div className={styles.h}>Прежде чем что-то <br></br>
+            <span className={styles.hc}>сделать,</span> <br></br> спроси себя <br></br><span className={styles.hc}>"Зачем?"</span></div>
             <div>
                 <div>Я хочу узнать:</div>
-                <Input value={initState.whatIwantKnown} placeholder="что хотите узнать?" onChange={(value)=>setWhatIwantKnown(value)}></Input>
+                <Input value={initState.whatIwantKnown} class={styles.inp1} placeholder="что хотите узнать?" onChange={(value)=>setWhatIwantKnown(value)}></Input>
             </div>
             <div>
                 <div>Я хочу получить:</div>
-                <Input value={initState.whatIwantGet} placeholder="что хотите получить?" onChange={(value)=>setWhatIwantGet(value)}></Input>
+                <Input class={styles.inp1} value={initState.whatIwantGet} placeholder="что хотите получить?" onChange={(value)=>setWhatIwantGet(value)}></Input>
             </div>
             <div>
                 <div>Я хочу научится:</div>
-                <Input value={initState.whatIwantLearn} placeholder="чему вы хотите научится?" onChange={(value)=>setWhatIwantLearn(value)}></Input>
+                <Input class={styles.inp1} value={initState.whatIwantLearn} placeholder="чему вы хотите научится?" onChange={(value)=>setWhatIwantLearn(value)}></Input>
             </div>
-            <div onClick={()=>dispatch(setWhyPage(WhyPageState))}>
-                <Link href="/registration/onBoarding" >Назад</Link>
-                <Link href="/registration/onBoarding/2" >Вперед</Link>
+            <div className={styles.linkWrapper} onClick={()=>dispatch(setWhyPage(WhyPageState))}>
+                <div className={styles.backLink}>
+                    <Link href="/registration/onBoarding" >Назад</Link>
+                </div>
+                <div className={styles.nextLink}>   
+                    <Link href="/registration/onBoarding/2">Вперед</Link>
+                </div>
             </div>
         </div>
     )

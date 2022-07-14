@@ -48,8 +48,12 @@ const OnBoardingPage5: NextPage = () => {
                 {inputs}
             </div>
             <div onClick={()=>dispatch(setWhatILikePage({things:list}))}>
-                    <Link href="/registration/onBoarding/4">Назад</Link>
-                    <Link href="/registration/onBoarding/lastPage">Вперед</Link>
+                    <div>
+                        <Link href="/registration/onBoarding/4">Назад</Link>
+                    </div>
+                    <div className={styles.nextLink}>
+                        <Link href="/registration/onBoarding/lastPage">Вперед</Link>
+                    </div>
             </div>
         </div>
     )

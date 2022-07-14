@@ -1,0 +1,141 @@
+.nextLink{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 10px;
+
+    width: 94px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    
+    /* Main/white */
+    cursor: pointer;
+    color: #FFFFFF;
+    /* Main/fuksia */
+
+    background: #7D47BF;
+    /* Main/fuksia */
+
+    border: 2px solid #7D47BF;
+    border-radius: 12px;
+    z-index: 10;
+
+}
+.backLink{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    width: 92px;
+    height: 30px;
+
+    /* Main/fuksia */
+    cursor: pointer;
+    color: #FFFFFF;
+
+    border: 2px solid #7D47BF;
+    border-radius: 12px;
+    z-index: 10;
+}
+.h{
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+    /* or 118% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* Main/white */
+
+    color: #FFFFFF;
+}
+.hc{
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+    /* or 118% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* Main/fuksia */
+
+    color: #7D47BF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.mainWrapper{
+   display: flex;
+   flex-direction: column;
+   gap:50px;
+   align-items: center;
+   justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.union{
+    width: 80%;
+    position: absolute;
+    bottom:100px;
+    right: 0px;
+    z-index: 1;
+
+}
+
+.inp1{
+    margin-top: 10px;
+    width: 300px;
+}
+
+.linkWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:50px
+}
+
+.powerWrapper{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.inpFile{
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    gap: 36px;
+    width: 166px;
+    height: 30px;
+    left: calc(50% - 166px/2);
+    top: 494px;
+
+    /* Main/fuksia */
+
+    background: #7D47BF;
+    border-radius: 12px;
+}

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFormState, setWhoIPage, whoIPageIE } from "../../../app/user/onBoardingSlice";
 import { AppState } from '../../../app/store'
 import { WhoIToggle } from "../../../components/WhoIToggle";
+import styles from "../../../styles/onBoarding/onBoarding.module.css"
 
 const OnBoardingPage4: NextPage = () => {
     let initState = useSelector((state: AppState)=>getFormState(state))[3] as whoIPageIE
@@ -70,9 +71,14 @@ const OnBoardingPage4: NextPage = () => {
                 ></WhoIToggle>
 
             </div>
-            <div onClick={()=>dispatch(setWhoIPage(state))}>
-                    <Link href="/registration/onBoarding/3">Назад</Link>
-                    <Link href="/registration/onBoarding/5">Вперед</Link>
+            <div className={styles.linkWrapper} onClick={()=>dispatch(setWhoIPage(state))}>
+                    <div className={styles.backLink}>
+                        <Link href="/registration/onBoarding/3">Назад</Link>
+                    </div>
+                    <div className={styles.nextLink}>
+                        <Link href="/registration/onBoarding/5" className={styles.nextLink}>Вперед</Link>
+                    </div>
+
             </div>
         </div>
     )
