@@ -29,10 +29,12 @@ const OnBoardingPage4: NextPage = () => {
 
     let dispatch = useDispatch()
     return(
-        <div>
-            <div>Какой я?</div>
-            <div>выбери одно из двух</div>
-            <div>
+        <div className={styles.mainWrapper}>
+            <div className={styles.h}>Какой <br></br>
+                <span className={styles.hc}>
+                    "я?"
+                </span></div>
+            <div className={styles.whoIWrpaper}>
                 <WhoIToggle 
                     active={introvert}
                     onChange={(value)=>setInrovert(value)}
@@ -80,6 +82,8 @@ const OnBoardingPage4: NextPage = () => {
                     </div>
 
             </div>
+            <img src="/images/union.svg" className={styles.union}></img>
+
         </div>
     )
 }

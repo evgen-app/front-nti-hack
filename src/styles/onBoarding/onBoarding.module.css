@@ -81,19 +81,31 @@
 }
 
 .mainWrapper{
+    margin-top: 50px;
    display: flex;
    flex-direction: column;
    gap:50px;
    align-items: center;
    justify-content: center;
     width: 100%;
-    height: 100vh;
+    z-index: 10;
 }
+
+.firstwrapper{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+     height: 100vh;
+ }
+
 
 .union{
     width: 80%;
     position: absolute;
-    bottom:100px;
+    bottom:0px;
     right: 0px;
     z-index: 1;
 
@@ -109,20 +121,32 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap:50px
+    gap:50px;
+    margin-bottom:50px;
 }
 
 .powerWrapper{
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap:5px;
     align-items: center;
     justify-content: center;
+    z-index: 100;
+
+}
+.whoIWrpaper{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    z-index: 100;
+
 }
 
 .inpFile{
     
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -138,4 +162,80 @@
 
     background: #7D47BF;
     border-radius: 12px;
+}
+
+.hs{
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* Main/white */
+
+    color: #FFFFFF;
+}
+.hss{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    /* or 106% */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    /* Main/white */
+
+    color: #FFFFFF;
+}
+.gss{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    /* or 106% */
+
+    text-align: left;
+    letter-spacing: 0.03em;
+
+    /* Main/white */
+    z-index: 100;
+
+    color: #FFFFFF;
+}
+
+.gs{
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+
+
+    /* Main/white */
+    z-index: 100;
+
+    color: #FFFFFF;
+}
+
+.lastWrapper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap:15px;
+    z-index: 100;
+}
+
+.z{
+    z-index: 100;
+
 }

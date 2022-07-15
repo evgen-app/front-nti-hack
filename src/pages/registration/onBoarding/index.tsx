@@ -6,7 +6,7 @@ import styles from "../../../styles/onBoarding/onBoarding.module.css"
 
 const OnBoardingPage: NextPage = () => {
     return(
-        <div className={styles.mainWrapper}>
+        <div className={styles.firstwrapper}>
             <div className={styles.h}>Сформмируйте <span className={styles.hc}>профиль</span></div>
             <div>Это поможет достигнуть цели!</div>
             <div className={styles.nextLink}>

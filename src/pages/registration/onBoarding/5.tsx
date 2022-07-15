@@ -35,26 +35,37 @@ const OnBoardingPage5: NextPage = () => {
     }
 
     return(
-        <div>
-            <div>
-                Как понять, что мне нравится? <br></br>
-                Выбирать, пробовать и снова Выбирать!
+        <div className={styles.mainWrapper}>
+            <div className={styles.h}>
+                Как понять, <br/> 
+                <span className={styles.hc}>
+                что мне нравится?
+                </span><br></br>
+                <div className={styles.hs}>
+                    Выбирать, пробовать, <br/>
+                    снова Выбирать!
+                </div>
+
             </div>
-            <div>
+            <div className={styles.hss}>
                 10 вещей, которые я хотел бы сделать, <br></br>
                 но почему-то до сих пор не сделал:
             </div>
-            <div>
+            <div className={styles.whoIWrpaper}>
                 {inputs}
             </div>
-            <div onClick={()=>dispatch(setWhatILikePage({things:list}))}>
-                    <div>
+            <img src="/images/union.svg" className={styles.union}></img>
+
+            <div className={styles.linkWrapper} onClick={()=>dispatch(setWhatILikePage({things:list}))}>
+                    <div className={styles.backLink}>
                         <Link href="/registration/onBoarding/4">Назад</Link>
                     </div>
                     <div className={styles.nextLink}>
                         <Link href="/registration/onBoarding/lastPage">Вперед</Link>
                     </div>
             </div>
+            <img src="/images/union.svg" className={styles.union}></img>
+
         </div>
     )
 }

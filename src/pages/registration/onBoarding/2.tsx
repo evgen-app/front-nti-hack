@@ -79,6 +79,8 @@ const OnBoardingPage2: NextPage = () => {
                         <Link href="/registration/onBoarding/3" className={styles.nextLink}>Вперед</Link>
                     </div>
             </div>
+            <img src="/images/union.svg" className={styles.union}></img>
+
         </div>
     )
 }

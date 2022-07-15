@@ -35,29 +35,30 @@ const lastPage: NextPage = () => {
     }
 
     return(
-        <div>
-            <div>Спасибо что заполнили форму!</div>
-            <div>
+        <div className={styles.lastWrapper}>
+            <div className={styles.h}>Спасибо, что<br/>
+            <span className={styles.hc}>заполнили форму!</span></div>
+            <div className={styles.gss}>
                 Вы прошли главный и один из самых главных шагов к успеху, 
                 этот небольшой самоанализ поможет вам сформировать первые цели.
             </div>
-            <div>
-                <div>Мы подготовили для тебя пару полезных советов:</div>
-                <ul>
+            <div className={styles.gs}>
+                <div className={styles.gss}>Мы подготовили для тебя пару полезных советов:</div>
+                <ul className={styles.gss}>
                     {
                         BadSkills.map((skill)=><li>{skill}</li>)
                     }
                 </ul>
             </div>
-            <div>
-                <div>Мы рады что ты движешься в нужном направлении и уже определился со многими факторами</div>
-                <div>{why.whatIwantGet == ""? null:("Ты хочешь получить: " + why.whatIwantGet)}</div>
-                <div>{why.whatIwantKnown == ""? null:("Ты хочешь узнать: " + why.whatIwantGet)}</div>
-                <div>{why.whatIwantLearn == ""? null:("Ты хочешь научится: " + why.whatIwantGet)}</div>
+            <div className={styles.z}>
+                <div className={styles.gss}>Мы рады что ты движешься в нужном направлении и уже определился со многими факторами</div>
+                <div className={styles.gss}>{why.whatIwantGet == ""? null:("Ты хочешь получить: " + why.whatIwantGet)}</div>
+                <div className={styles.gss}>{why.whatIwantKnown == ""? null:("Ты хочешь узнать: " + why.whatIwantKnown)}</div>
+                <div className={styles.gss}>{why.whatIwantLearn == ""? null:("Ты хочешь научится: " + why.whatIwantLearn)}</div>
             </div>
-            <div>
-                <div>Ты очень классный, ведь у тебя есть все качества, чтобы достичь твоих целей и исполнить все твои мечты.</div>
-                <div>{you.individualist == null? null: 
+            <div className={styles.z}>
+                <div className={styles.gss}>Ты очень классный, ведь у тебя есть все качества, чтобы достичь твоих целей и исполнить все твои мечты.</div>
+                <div className={styles.gss}>{you.individualist == null? null: 
                 ("Ведь ты:" +  you.individualist? "индивидуалист":"командный игрок" + ", "
                     + you.introvert? "интроверт":"экстроверт" + ", "
                     + you.leader? "лидер": "исполнитель" + ", "
@@ -65,20 +66,29 @@ const lastPage: NextPage = () => {
                     + you.organize? "организованный":"творческий" + ", "
                     + you.serious? "серьезный":"легкомысленный" + ", "
                 )}</div>
-                <div>Надо держать грань между всеми качествами, нельзя быть во всех ситуациях серьезным, также как и нельзя быть всегда легкомысленным, надо все делать в меру.</div>
-                <div>
-                    <div>Незабывай про вещи, что ты обещал нам сделать:</div>
-                    <ul>
+                <div className={styles.gss}>Надо держать грань между всеми качествами, нельзя быть во всех ситуациях серьезным, также как и нельзя быть всегда легкомысленным, надо все делать в меру.</div>
+                <div className={styles.gs}>
+                    <div className={styles.gss}>Незабывай про вещи, что ты обещал нам сделать:</div>
+                    <ul className={styles.gss}>
                         {   
                             things.things.length>0?  things.things.map((value)=><li>{value}</li>):null
                         }
                     </ul>
                 </div>
+
             </div>
-            <div>Мы уверены, все твои цели и мечты сбудуться, если следовать четкому плану</div>
-            <div className={styles.nextLink}>
-                <Link href="/" className={styles.nextLink}>Далее</Link>
+            <img src="/images/union.svg" className={styles.union}></img>
+
+            <div className={styles.gss}>Мы уверены, все твои цели и мечты сбудуться, если следовать четкому плану</div>
+            <div className={styles.linkWrapper}>
+                    <div className={styles.backLink}>
+                        <Link href="/registration/onBoarding/5">Вернуться</Link>
+                    </div>
+                    <div className={styles.nextLink}>
+                        <Link href="/">Далее</Link>
+                    </div>
             </div>
+
         </div>
     )
 }

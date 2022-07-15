@@ -8,9 +8,27 @@
 
 .value{
     cursor: pointer;
-    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    gap: 10px;
+    
+    width: 135px;
+    
+    /* Main/fuksia */
+    
+    border: 2px solid #7D47BF;
+    border-radius: 12px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .active{
-    background-color: azure !important;
+    background: #7D47BF;
 }

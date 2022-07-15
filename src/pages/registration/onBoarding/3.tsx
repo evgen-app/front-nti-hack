@@ -39,6 +39,8 @@ const OnBoardingPage3: NextPage = () => {
                     </div>
 
             </div>
+            <img src="/images/union.svg" className={styles.union}></img>
+
         </div>
     )
 
